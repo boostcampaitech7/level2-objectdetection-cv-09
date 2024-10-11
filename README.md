@@ -12,3 +12,18 @@
 Input : 쓰레기 객체가 담긴 이미지가 모델의 인풋으로 사용됩니다. 또한 bbox 정보(좌표, 카테고리)는 model 학습 시 사용이 됩니다. bbox annotation은 COCO format으로 제공됩니다. (COCO format에 대한 설명은 학습 데이터 개요를 참고해주세요.)
 
 Output : 모델은 bbox 좌표, 카테고리, score 값을 리턴합니다. 이를 submission 양식에 맞게 csv 파일을 만들어 제출합니다. (submission format에 대한 설명은 평가방법을 참고해주세요.)
+
+## Training
+### Training with config example
+Modify the configurations in `.yaml` config files, then run:
+  ```
+  python train.py --config ./config/config.yaml
+  ```
+
+
+## Testing
+### Test example
+  ```
+  # Output will be saved in ./output/{model type}/{exp_name}/
+  python test.py --config ./config/config.yaml
+  ```
