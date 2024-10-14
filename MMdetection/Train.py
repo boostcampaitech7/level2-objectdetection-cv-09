@@ -12,3 +12,4 @@ def main(config):
     model = build_detector(cfg.model)
     model.init_weights()
     train_detector(model, datasets[0], cfg, distributed=False, validate=False)
+
