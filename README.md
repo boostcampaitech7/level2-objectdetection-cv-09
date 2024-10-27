@@ -1,3 +1,4 @@
+# Recycling Object Detection
 바야흐로 대량 생산, 대량 소비의 시대. 우리는 많은 물건이 대량으로 생산되고, 소비되는 시대를 살고 있습니다. 하지만 이러한 문화는 '쓰레기 대란', '매립지 부족'과 같은 여러 사회 문제를 낳고 있습니다.
 
 ![image](https://github.com/user-attachments/assets/f0a23e8e-a6f8-421a-850f-f1991244cbdf)
@@ -13,17 +14,36 @@ Input : 쓰레기 객체가 담긴 이미지가 모델의 인풋으로 사용됩
 
 Output : 모델은 bbox 좌표, 카테고리, score 값을 리턴합니다. 이를 submission 양식에 맞게 csv 파일을 만들어 제출합니다. (submission format에 대한 설명은 평가방법을 참고해주세요.)
 
-## Training
-### Training with config example
-Modify the configurations in `.yaml` config files, then run:
-  ```
-  python train.py --config ./config/config.yaml
-  ```
+## Project Structure
+
+This project is composed of three main components: **MMDetection**, **Ultralytics**, and **XAI**. Below is an overview of each component:
+
+1. **MMDetection**:
+   - This component includes configuration files and models for various object detection algorithms **excluding YOLO**. It leverages the MMDetection framework to manage and run these models.
+   - For model setups, please refer to the **`mmdetection/custom_config`** directory. This folder contains configuration files specifically designed for the models used in this project.
+2. **Ultralytics**:
+   - This section is focused on YOLO models, specifically **YOLOv11**. It contains the configuration files and scripts required to set up and run YOLOv11 using the Ultralytics framework.
+   
+3. **XAI**:
+   - The XAI component is dedicated to analyzing and interpreting YOLO models.
+
+## Installation
+This project is based on [MMDetection](https://github.com/open-mmlab/mmdetection) and [Ultralytics](https://github.com/ultralytics/ultralytics). To set up the environment properly, please follow the installation instructions provided on each project's official page:
+
+- **[MMDetection Installation Guide](https://mmdetection.readthedocs.io/en/latest/get_started.html)**
+
+- **[Ultralytics Installation Guide](https://github.com/ultralytics/ultralytics)**
+
+Please make sure both libraries are installed and configured properly before running this project.
 
 
-## Testing
-### Test example
+## MMdetection based model testing
+### testing example
+  ```bash
+  # python mmdetection/tools/test.py {config_path} {checkpoint_path}
+  python mmdetection/tools/test.py mmdetection/custom_configs/kmj/faster-rcnn_r50_fpn_bbox_custom mmdetection/train_result/faster-rcnn_r50_fpn_bbox_custom.ckpt
   ```
-  # Output will be saved in ./output/{model type}/{exp_name}/
-  python test.py --config ./config/config.yaml
-  ```
+
+## ultralytics
+
+## XAI
