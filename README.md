@@ -45,6 +45,11 @@ Please make sure both libraries are installed and configured properly before run
   ```
 
 ## ultralytics
+### YOLO format dataset
+In order to train with the YOLO model, the COCO-format dataset needs to be converted to YOLO format. Please refer to the following repository for dataset conversion.
+
+- **[COCO to YOLO Format](https://github.com/ultralytics/JSON2YOLO)**
+
 ### testing example
   ```bash
   yolo detect val model=custom_config/train_cfg.yaml data=custom_config/dataset.yaml
