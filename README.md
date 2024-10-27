@@ -45,5 +45,9 @@ Please make sure both libraries are installed and configured properly before run
   ```
 
 ## ultralytics
+### testing example
+  ```bash
+  yolo detect val model=custom_config/train_cfg.yaml data=custom_config/dataset.yaml
+  ```
 
 ## XAI
