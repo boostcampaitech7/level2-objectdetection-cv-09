@@ -57,6 +57,7 @@ In order to train with the YOLO model, the COCO-format dataset needs to be conve
 
 ## XAI
 bestm.pt : best model of YOLO11 m
+
 bests.pt : best model of YOLO11 s
 
 ### testing example
