@@ -56,3 +56,8 @@ In order to train with the YOLO model, the COCO-format dataset needs to be conve
   ```
 
 ## XAI
+bestm.pt : best model of YOLO11 m
+bests.pt : best model of YOLO11 s
+
+### testing example
+You can use Shap_values_for_ObjectDetection_Final_simple.ipynb to rotate the notebooks in order.
